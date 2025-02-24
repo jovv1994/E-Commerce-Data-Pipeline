@@ -1,0 +1,7 @@
+.DS_Store
+.vscode/
+*.pyc
+testenv/
+dataset/
+.pytest_cache/
+AnyoneAI - Sprint Project 01.ipynb
