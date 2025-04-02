@@ -15,4 +15,11 @@ def load(data_frames: Dict[str, DataFrame], database: Engine):
     # use pandas.Dataframe.to_sql() to load the dataframe into the database as a
     # table.
     # For the table name use the `data_frames` dict keys.
-    raise NotImplementedError
+    # raise NotImplementedError
+
+    for table_name, table in data_frames.items():
+        try:
+            table.to_sql(table_name, database)
+        except Exception as e:
+            print(f"An unexpected error ocurred: {e}")
+
